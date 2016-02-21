@@ -1,2 +1,5 @@
-# pixelsort
-Pixel sorting tools for Processing.
+# PIXELSORT
+Pixel sorting tools for Processing 3
+
+# Usage
+Download & open pixelsort.pde in Processing
