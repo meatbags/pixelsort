@@ -54,7 +54,8 @@ class pixelSorter
   
   void enableMask()
   {
-    this.func.useMask = true;  
+    if (this.func.mask.length == this.src.pixels.length)
+      this.func.useMask = true;  
   }
   
   void resetSortedFlags()

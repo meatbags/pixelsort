@@ -41,81 +41,6 @@ class sortingFunctions
   
   sortingFunctions(){}
   
-  int[][] getValueArray(pixelData[] p, int key)
-  {
-    int[][] array = new int[p.length][2];
-    
-    if (key == SORT_KEY_BRIGHTNESS)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].brightness;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_RED)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].red;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_GREEN)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].green;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_BLUE)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].blue;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_CYAN)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].cyan;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_MAGENTA)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].magenta;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_YELLOW)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].yellow;
-          array[i][1] = p[i].index;
-      }
-    else if (key == SORT_KEY_HUE)
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].hue;
-          array[i][1] = p[i].index;
-      }
-    else
-      for (int i=0; i<p.length; i+=1) {
-          array[i][0] = p[i].brightness;
-          array[i][1] = p[i].index;
-      }
-      
-    return array;
-  }
-  
-  int getPixelValue(pixelData p, int key)
-  {
-    if (key == SORT_KEY_BRIGHTNESS)
-      return p.brightness;
-    if (key == SORT_KEY_RED)
-      return p.red;
-    if (key == SORT_KEY_GREEN)
-      return p.green;
-    if (key == SORT_KEY_BLUE)
-      return p.blue;
-    if (key == SORT_KEY_CYAN)
-      return p.cyan;
-    if (key == SORT_KEY_MAGENTA)
-      return p.magenta;
-    if (key == SORT_KEY_YELLOW)
-      return p.yellow;
-    if (key == SORT_KEY_HUE)
-      return p.hue;
-    
-    return p.brightness;
-  }
-  
   pixelData[] getPixelArray(
     pixelData[] data,
     int index,
@@ -278,5 +203,80 @@ class sortingFunctions
       array[i].colour = src.pixels[sort[i][1]];
       array[i].flagAsSorted = true;
     }
+  }
+  
+  int[][] getValueArray(pixelData[] p, int key)
+  {
+    int[][] array = new int[p.length][2];
+    
+    if (key == SORT_KEY_BRIGHTNESS)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].brightness;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_RED)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].red;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_GREEN)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].green;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_BLUE)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].blue;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_CYAN)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].cyan;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_MAGENTA)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].magenta;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_YELLOW)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].yellow;
+          array[i][1] = p[i].index;
+      }
+    else if (key == SORT_KEY_HUE)
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].hue;
+          array[i][1] = p[i].index;
+      }
+    else
+      for (int i=0; i<p.length; i+=1) {
+          array[i][0] = p[i].brightness;
+          array[i][1] = p[i].index;
+      }
+      
+    return array;
+  }
+  
+  int getPixelValue(pixelData p, int key)
+  {
+    if (key == SORT_KEY_BRIGHTNESS)
+      return p.brightness;
+    if (key == SORT_KEY_RED)
+      return p.red;
+    if (key == SORT_KEY_GREEN)
+      return p.green;
+    if (key == SORT_KEY_BLUE)
+      return p.blue;
+    if (key == SORT_KEY_CYAN)
+      return p.cyan;
+    if (key == SORT_KEY_MAGENTA)
+      return p.magenta;
+    if (key == SORT_KEY_YELLOW)
+      return p.yellow;
+    if (key == SORT_KEY_HUE)
+      return p.hue;
+    
+    return p.brightness;
   }
 }
